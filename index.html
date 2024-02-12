@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
+    <title>Channel Dashboard - Youtube Studio</title>
+</head>
+
+<body>
+    <section class="all-wrapper flex">
+        <div data-navbar class="flex">
+            <nav class="navbar flex">
+                <div style="--opt-wid: 300px;" data-left-controls class="flex">
+                    <div class="icon center" id="menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </div>
+                    <div class="logo icon center">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                            viewBox="0 0 97.6 24" xml:space="preserve">
+                            <style>
+                                .st2 {
+                                    fill: #0a0a0a
+                                }
+                            </style>
+                            <path
+                                d="M33.6 3.8c-.4-1.5-1.6-2.6-3-3C27.9 0 17.1 0 17.1 0S6.4 0 3.8.7c-1.5.4-2.6 1.5-3 3C0 6.4 0 12 0 12s0 5.6.7 8.2c.4 1.5 1.6 2.6 3 3 2.7.8 13.4.8 13.4.8s10.7 0 13.4-.7c1.5-.4 2.6-1.6 3-3 .7-2.7.7-8.2.7-8.2s.1-5.7-.6-8.3z"
+                                fill="red" />
+                            <path d="M13.7 17.1l8.9-5.1-8.9-5.1v10.2z" fill="#fff" />
+                            <path class="st2"
+                                d="M40.2 16.5h3.1c-.1 2.8.4 3.6 1.6 3.6 1.1 0 1.6-.7 1.6-2.2 0-2.3-1.2-3.4-2.8-4.8-2.6-2.3-3.7-3.6-3.7-6.8 0-3.1 1.4-4.9 5-4.9 3.5 0 4.9 2 4.4 6.2l-3.1.2c.1-2.8-.2-3.9-1.5-3.9-1.2 0-1.6.8-1.6 2.2 0 2.1.9 2.8 2.8 4.6 2.4 2.2 3.7 3.5 3.7 6.6 0 3.9-1.5 5.4-5 5.4-3.7-.1-5.1-2-4.5-6.2zM57.7 21.9c-1 .5-2.3.6-3.1.6-2.2 0-2.6-1.1-2.6-3.8V9.9h-1.2V7.3h1.4l.4-4.5H55v4.5h2.3v2.6h-2.2v8.3c0 1.4.2 1.7.7 1.7s.9-.1 1.3-.2l.6 2.2zM68.4 7.3v15.1h-2.7l-.3-1.8h-.1c-.8 1.5-1.9 2.1-3.2 2.1-2 0-2.9-1.3-2.9-4V7.3h3.4v11.1c0 1.3.3 1.9 1 1.9.6 0 1.2-.4 1.4-1v-12h3.4zM79.6.9v21.4H77l-.4-2.1h-.1c-.5 1.4-1.7 2.4-3.2 2.4-2.4 0-3.2-1.7-3.2-6.6v-2.4c0-4.6 1-6.6 3.3-6.6 1.2 0 2.3.6 2.9 1.6h.1c-.1-1.3-.1-2.2-.1-3.3V.9h3.3zm-3.3 17.8v-8.5c-.3-.5-.8-.8-1.3-.8-1.1 0-1.4 1-1.4 4.3v1.9c0 3.4.3 4.4 1.3 4.4.5.1 1.2-.4 1.4-1.3zM81.3 3.4c0-1.6.6-2.1 1.8-2.1 1.3 0 1.8.5 1.8 2.1 0 1.7-.6 2.1-1.8 2.1s-1.8-.4-1.8-2.1zm.2 3.9h3.2v15.1h-3.2V7.3zM86.3 15.9v-2.2C86.3 8.8 87.7 7 91 7s4.6 1.9 4.6 6.7v2.2c0 4.7-1.2 6.7-4.7 6.7s-4.6-2-4.6-6.7zm5.9 1.2v-4.7c0-2.1-.3-3.1-1.3-3.1s-1.2 1.1-1.2 3.1v4.7c0 2.2.3 3.1 1.2 3.1 1 0 1.3-.9 1.3-3.1z" />
+                        </svg>
+                    </div>
+                </div>
+                <div style="--opt-wid: 600px;" class="search-field center">
+                    <div data-search-c class=" flex">
+                        <div class="icon center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path
+                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg>
+                        </div>
+                        <input type="search" name="" id="" data-input>
+                    </div>
+                </div>
+                <div style="--opt-wid: 300px;" class="right flex">
+                    <div data-right-c class="flex">
+                        <div class="icon center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                <path
+                                    d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                            </svg>
+                        </div>
+                        <button class="flex">
+                            CREATE
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                <path
+                                    d="m160-800 80 160h120l-80-160h80l80 160h120l-80-160h80l80 160h120l-80-160h120q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800Zm0 240v320h640v-320H160Zm0 0v320-320Z" />
+                            </svg>
+                        </button>
+                        <div class="center img">
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div data-section>
+            <div data-side-bar class="sidebar flex" id="sidebar">
+                <div data-user class="flex">
+                    <div data-image></div>
+                    <div class="center" data-Static="Your Channel">
+                        Your Channel
+                    </div>
+                    <div data-name class="center">
+                        Code Faster
+                    </div>
+                </div>
+                <div data-links-c class="flex">
+                    <ul class="flex" data-list>
+                        <li data-target="#Dashboard" class="flex  active">
+                            
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                                </svg>
+                            </div>
+                            <p>Dashboard</p>
+                        </li>
+                        <li data-target="#Content" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="m460-380 280-180-280-180v360ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
+                                </svg>
+                            </div>
+                            <p>Content</p>
+                        </li>
+                        <li data-target="#Analytics" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M280-280h80v-280h-80v280Zm160 0h80v-400h-80v400Zm160 0h80v-160h-80v160ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+                                </svg>
+                            </div>
+                            <p>Analytics</p>
+                        </li>
+                        <li data-target="#Comments" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM880-80 720-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v720ZM160-320h594l46 45v-525H160v480Zm0 0v-480 480Z" />
+                                </svg>
+                            </div>
+                            <p>Comments</p>
+                        </li>
+                        <li data-target="#Subtitle" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M240-320h320v-80H240v80Zm400 0h80v-80h-80v80ZM240-480h80v-80h-80v80Zm160 0h320v-80H400v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z" />
+                                </svg>
+                            </div>
+                            <p>Subtitle</p>
+                        </li>
+                        <li data-target="#Copyright" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M400-320h160q17 0 28.5-11.5T600-360v-80h-80v40h-80v-160h80v40h80v-80q0-17-11.5-28.5T560-640H400q-17 0-28.5 11.5T360-600v240q0 17 11.5 28.5T400-320Zm80 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                                </svg>
+                            </div>
+                            <p>Copyright</p>
+                        </li>
+                        <li data-target="#Earn" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M441-120v-86q-53-12-91.5-46T293-348l74-30q15 48 44.5 73t77.5 25q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-84h80v84q50 8 82.5 36.5T651-650l-74 32q-12-32-34-48t-60-16q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v84h-80Z" />
+                                </svg>
+                            </div>
+                            <p>Earn</p>
+                        </li>
+                        <li data-target="Customize" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                                </svg>
+                            </div>
+                            <p>Customize</p>
+                        </li>
+                        <li data-target="#Audio" class="flex">
+                            <div class="icon center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M500-360q42 0 71-29t29-71v-220h120v-80H560v220q-13-10-28-15t-32-5q-42 0-71 29t-29 71q0 42 29 71t71 29ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
+                                </svg>
+                            </div>
+                            <p>Audio Library</p>
+                        </li>
+                    </ul>
+                </div>
+                <div data-addi-se></div>
+            </div>
+            <div data-contents>
+                <div id="Dashboard" class="active_tab" data-content>
+                    <div class="absolute-icons">
+                        <div id="upload">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-80v-80h640v80H160Zm200-160v-280H200l280-360 280 360H600v280H360Zm80-80h80v-280h76L480-750 364-600h76v280Zm40-280Z"/></svg>
+                        </div>
+                        <div>
+                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope tp-yt-iron-icon" style="pointer-events: none; display: block;"><g width="24" height="24" viewBox="0 0 24 24" class="style-scope tp-yt-iron-icon"><path d="M14 11.9999C14 13.0999 13.1 13.9999 12 13.9999C10.9 13.9999 10 13.0999 10 11.9999C10 10.8999 10.9 9.99992 12 9.99992C13.1 9.99992 14 10.8999 14 11.9999ZM8.48 8.44992L7.77 7.74992C6.68 8.82992 6 10.3399 6 11.9999C6 13.6599 6.68 15.1699 7.77 16.2499L8.48 15.5399C7.57 14.6399 7 13.3899 7 11.9999C7 10.6099 7.57 9.35992 8.48 8.44992ZM16.23 7.74992L15.52 8.45992C16.43 9.35992 17 10.6099 17 11.9999C17 13.3899 16.43 14.6399 15.52 15.5499L16.23 16.2599C17.32 15.1699 18 13.6599 18 11.9999C18 10.3399 17.32 8.82992 16.23 7.74992ZM5.65 5.62992L4.95 4.91992C3.13 6.72992 2 9.23992 2 11.9999C2 14.7599 3.13 17.2699 4.95 19.0799L5.66 18.3699C4.02 16.7399 3 14.4899 3 11.9999C3 9.50992 4.02 7.25992 5.65 5.62992ZM19.05 4.91992L18.34 5.62992C19.98 7.25992 21 9.50992 21 11.9999C21 14.4899 19.98 16.7399 18.35 18.3699L19.06 19.0799C20.87 17.2699 22 14.7599 22 11.9999C22 9.23992 20.87 6.72992 19.05 4.91992Z" class="style-scope tp-yt-iron-icon"></path></g></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-400v-80h280v80H160Zm0-160v-80h440v80H160Zm0-160v-80h440v80H160Zm360 560v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="one" style="--one-w: 40%;">
+                        <h2>Channel Dashboard</h2>
+                        <div class="wrapper wrapper_1" style="--wrapper-w: 30%;">
+                            <h4>
+                                <p>Latest Video Performance</p>
+                            </h4>
+                            <div class="img"></div>
+                        </div>
+                        <div class="wrapper wrapper_2" style="--wrapper-w: 50%;">
+                            <h4>
+                                <p>Published Videos</p>
+                            </h4>
+                            <div class="row">
+                                <div class="img_r"></div>
+                                <div class="titles">
+                                    <p>This Vide is about<span class="counter"></span></p>
+                                    <div class="icons_c">
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M160-160v-320h160v320H160Zm240 0v-640h160v640H400Zm240 0v-440h160v440H640Z" />
+                                            </svg>
+                                            <p>9</p>
+                                        </div>
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM880-80 720-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v720ZM160-320h594l46 45v-525H160v480Zm0 0v-480 480Z" />
+                                            </svg>
+                                            <p>3</p>
+                                        </div>
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
+                                            </svg>
+                                            <p>200</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="img_r"></div>
+                                <div class="titles">
+                                    <p>This Vide is about<span class="counter"></span></p>
+                                    <div class="icons_c">
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M160-160v-320h160v320H160Zm240 0v-640h160v640H400Zm240 0v-440h160v440H640Z" />
+                                            </svg>
+                                            <p>9</p>
+                                        </div>
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM880-80 720-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v720ZM160-320h594l46 45v-525H160v480Zm0 0v-480 480Z" />
+                                            </svg>
+                                            <p>3</p>
+                                        </div>
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
+                                            </svg>
+                                            <p>200</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="img_r"></div>
+                                <div class="titles">
+                                    <p>This Vide is about<span class="counter"></span></p>
+                                    <div class="icons_c">
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M160-160v-320h160v320H160Zm240 0v-640h160v640H400Zm240 0v-440h160v440H640Z" />
+                                            </svg>
+                                            <p>9</p>
+                                        </div>
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM880-80 720-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v720ZM160-320h594l46 45v-525H160v480Zm0 0v-480 480Z" />
+                                            </svg>
+                                            <p>3</p>
+                                        </div>
+                                        <div class="vid_i">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                                                width="24">
+                                                <path
+                                                    d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
+                                            </svg>
+                                            <p>200</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one one_2" style="--one-w: 40%;">
+                        <div class="wrappers">
+                            <p><span>Channel analytics</span></p>
+                            <div class="current"><p>Current Subscribers</p><span>70</span></div>
+                        </div>
+                        <div class="wrappers">
+                            <p class="head">
+                                <span>Latest Comments</span>
+                            </p>
+                            <div class="head 2">
+                                The Channel Comments that i have not respnded.
+                            </div>
+                            <div class="rows">
+                                <div data-user-img>
+                                    <div></div>
+                                </div>
+                                <div data-user-comment>
+                                    <p>I'am Yt</p>
+                                    <b>Nice Video</b>
+                                </div>
+                                <div data-user-video>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="rows">
+                                <div data-user-img>
+                                    <div></div>
+                                </div>
+                                <div data-user-comment>
+                                    <p>I'am Yt</p>
+                                    <b>Nice Video</b>
+                                </div>
+                                <div data-user-video>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="rows">
+                                <div data-user-img>
+                                    <div></div>
+                                </div>
+                                <div data-user-comment>
+                                    <p>I'am Yt</p>
+                                    <b>Nice Video</b>
+                                </div>
+                                <div data-user-video>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="rows">
+                                <div data-user-img>
+                                    <div></div>
+                                </div>
+                                <div data-user-comment>
+                                    <p>I'am Yt</p>
+                                    <b>Nice Video</b>
+                                </div>
+                                <div data-user-video>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one" style="--one-w: 30%;"></div>
+                </div>
+                <div id="Content" data-content>
+                    <p>content</p>
+                </div>
+                <div id="Analytics" data-content>
+                    Analytics
+                </div>
+                <div id="Comments" data-content>
+                    Comments
+                </div>
+                <div id="Subtitle" data-content>
+                    Subtitle
+                </div>
+                <div id="Copyright" data-content>
+                    Copyright
+                </div>
+                <div id="Earn" data-content>
+                    Earn
+                </div>
+                <div id="Customize" data-content>
+                    Customize
+                </div>
+                <div id="Audio" data-content>
+                    Audio Libray
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
